@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta name="google-site-verification" content="3_CeHzeBYpq9Q8B7JQko2BYovDz8vvmIU0aniYkECk0" />
+    <meta name="monetag" content="570b783b0ef98e8804244fa6cd831d93">
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
@@ -518,9 +520,17 @@
         }
 
         .ico {
-            object-fit: cover;
-            width: 200px;
-            height: 60px;
+            object-fit: contain;
+            width: 160px;
+            height: 48px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 640px) {
+            .ico {
+                width: 120px;
+                height: 36px;
+            }
         }
 
         .icoo {
@@ -634,7 +644,7 @@
 
         <!-- Top Navigation -->
         <nav
-            class="fixed top-0 inset-x-0 z-[60] py-6 px-6 sm:px-12 flex justify-between items-center bg-black/40 backdrop-blur-xl border-b border-white/5">
+            class="fixed top-0 inset-x-0 z-[60] py-4 px-4 sm:py-6 sm:px-12 flex justify-between items-center bg-black/40 backdrop-blur-xl border-b border-white/5">
             <div class="flex items-center">
                 <div class="cursor-pointer" onclick="goHome()">
                     <img class="ico" src="ico.png" alt="Leaf Cam Logo">
@@ -657,7 +667,7 @@
                 <img src="iconn.png" class="w-32 h-32 object-cover scale-110" alt="Icon">
 
             </div>
-            <h1 class="text-6xl md:text-9xl font-black tracking-tighter mb-8 flex flex-col" data-reveal>
+            <h1 class="text-5xl md:text-9xl font-black tracking-tighter mb-8 flex flex-col" data-reveal>
                 <span class="leaf-gradient-text italic">Random</span>
                 <span class="text-white">Video Chat.</span>
             </h1>
