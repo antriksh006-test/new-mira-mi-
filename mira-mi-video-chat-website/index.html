@@ -160,7 +160,8 @@
         }
 
         #ageGateModal {
-            display: none; /* Hidden by default now */
+            display: none;
+            /* Hidden by default now */
             z-index: 200;
         }
 
@@ -299,8 +300,13 @@
         }
 
         @keyframes textFlow {
-            0% { background-position: 0% center; }
-            100% { background-position: 200% center; }
+            0% {
+                background-position: 0% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
         }
 
         /* Dynamic Button Shine */
@@ -316,7 +322,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transform: rotate(45deg);
             transition: 0.5s;
             pointer-events: none;
@@ -1394,7 +1400,7 @@
             localStorage.setItem('mirami_age_verified', 'true');
             const ageGate = getEl('ageGateModal');
             if (ageGate) ageGate.style.display = 'none';
-            
+
             // Resume to chat since verification was triggered after auth
             goToStep('chat');
             initPermissions();
@@ -1509,7 +1515,7 @@
             localStorage.setItem('streamhop_user', JSON.stringify(userData));
             if (getEl('display-name')) getEl('display-name').innerText = `${userData.name}, ${userData.age}`;
             if (getEl('local-user-tag')) getEl('local-user-tag').innerText = userData.name;
-            
+
             // Age verification check deferred to here
             const ageVerified = localStorage.getItem('mirami_age_verified');
             if (ageVerified) {
@@ -1816,17 +1822,18 @@
                 camBtn.innerHTML = isCamOff ? '<i class="fas fa-video-slash text-xl text-white"></i>' : '<i class="fas fa-video text-xl text-white"></i>';
             }
             if (camOffOverlay) camOffOverlay.classList.toggle('hidden', !isCamOff);
-        // Mouse parallax for leaves
-        document.addEventListener('mousemove', (e) => {
-            const leaves = document.querySelectorAll('.bg-leaf');
-            const x = (window.innerWidth / 2 - e.pageX) / 40;
-            const y = (window.innerHeight / 2 - e.pageY) / 40;
-            
-            leaves.forEach((leaf, index) => {
-                const depth = (index + 1) * 0.5;
-                leaf.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
+            // Mouse parallax for leaves
+            document.addEventListener('mousemove', (e) => {
+                const leaves = document.querySelectorAll('.bg-leaf');
+                const x = (window.innerWidth / 2 - e.pageX) / 40;
+                const y = (window.innerHeight / 2 - e.pageY) / 40;
+
+                leaves.forEach((leaf, index) => {
+                    const depth = (index + 1) * 0.5;
+                    leaf.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
+                });
             });
-        });
+        }
     </script>
 </body>
 
