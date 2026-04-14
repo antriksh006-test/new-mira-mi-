@@ -2,28 +2,24 @@
 <html lang="en">
 
 <head>
-    <script src="https://quge5.com/88/tag.min.js" data-zone="207920" async data-cfasync="false"></script>
-    <meta name="google-site-verification" content="GAFtxEepvYnQvF145-T8hoBJyJY-FzdSeld5MOmTUk0" />
-    <meta name="monetag" content="a701d088e952959d8feda0cff3118f6d">
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/favicon.svg" color="#ec4899">
+    <link rel="mask-icon" href="icons/favicon.svg" color="#10b981">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Free Random Video Chat (USA, UK, Canada) – Meet Real People Instantly</title>
+    <title>Leaf Cam – Best Free Random Video Chat (USA, UK, Canada)</title>
     <script src="https://quge5.com/88/tag.min.js" data-zone="206794" async data-cfasync="false"></script>
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Start free random video chat with people from USA, UK, and Canada. No signup required. Fast connections, private chats, and instant matching.">
+        content="Start free random video chat on Leaf Cam. Connect with people from USA, UK, and Canada instantly. No signup required. Fast, private, and secure.">
     <meta name="keywords"
-        content="video chat, free random video chat, random video chat, chat with strangers, live cam chat, instant video chat, omegle alternative, video chat USA, UK, Canada">
-    <meta name="author" content="MiraMi">
+        content="leaf cam, video chat, free random video chat, random video chat, chat with strangers, live cam chat, instant video chat, omegle alternative, video chat USA, UK, Canada">
+    <meta name="author" content="Leaf Cam">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#ec4899">
+    <meta name="theme-color" content="#10b981">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -97,12 +93,10 @@
             overflow-x: hidden;
         }
 
-        /* Enable scrolling only on landing page */
+        /* Enable natural scrolling on landing page */
         .scrollable-content {
             overflow-y: auto;
-            height: 100vh;
-            /* Fallback */
-            height: 100dvh;
+            min-height: 100vh;
             scroll-behavior: smooth;
         }
 
@@ -160,12 +154,13 @@
         #aboutModal,
         #privacyModal,
         #ageGateModal {
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(25px);
+            background: rgba(0, 0, 0, 0.4);
             display: none;
         }
 
         #ageGateModal {
-            display: flex;
+            display: none; /* Hidden by default now */
             z-index: 200;
         }
 
@@ -189,7 +184,16 @@
 
         .glass {
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(236, 72, 153, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(236, 72, 153, 0.1);
         }
 
         .fade-in {
@@ -278,24 +282,237 @@
             color: rgba(255, 255, 255, 0.3);
         }
 
-        .mira-gradient-text {
-            background: linear-gradient(to right, #ec4899, #8b5cf6);
+        .leaf-gradient-text {
+            background: linear-gradient(135deg, #4ade80 0%, #10b981 50%, #059669 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: textFlow 5s linear infinite;
+        }
+
+        .mira-gradient-text {
+            background: linear-gradient(135deg, #f472b6 0%, #db2777 50%, #9d174d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: textFlow 5s linear infinite;
+        }
+
+        @keyframes textFlow {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Dynamic Button Shine */
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shine::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+            pointer-events: none;
+        }
+
+        .btn-shine:hover::after {
+            left: 100%;
+            top: 100%;
+        }
+
+        /* Lively Background Elements */
+        .bg-leaf {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            pointer-events: none;
+            animation: float 25s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(100px, 50px) scale(1.1);
+            }
+
+            100% {
+                transform: translate(-50px, 150px) scale(0.9);
+            }
+        }
+
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -2;
+            pointer-events: none;
+            animation: gridMove 40s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 50px 50px;
+            }
+        }
+
+        .leaf-particle {
+            position: fixed;
+            color: rgba(16, 185, 129, 0.18);
+            pointer-events: none;
+            z-index: -1;
+            filter: blur(1.5px);
+            transition: color 0.3s;
+        }
+
+        .leaf-anim-1 {
+            animation: drift1 25s linear infinite;
+        }
+
+        .leaf-anim-2 {
+            animation: drift2 35s linear infinite;
+        }
+
+        .leaf-anim-3 {
+            animation: drift3 30s linear infinite;
+        }
+
+        .leaf-anim-4 {
+            animation: drift4 40s linear infinite;
+        }
+
+        .leaf-anim-5 {
+            animation: drift5 45s linear infinite;
+        }
+
+        @keyframes drift1 {
+            0% {
+                transform: translate(-10vw, -10vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(110vw, 110vh) rotate(360deg) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes drift2 {
+            0% {
+                transform: translate(110vw, -10vh) rotate(0deg) scale(1.2);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-10vw, 110vh) rotate(-360deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes drift3 {
+            0% {
+                transform: translate(50vw, 110vh) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(60vw, -10vh) rotate(720deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        @keyframes drift4 {
+            0% {
+                transform: translate(-10vw, 50vh) rotate(0deg) scale(1);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(110vw, 40vh) rotate(180deg) scale(0.7);
+                opacity: 0;
+            }
+        }
+
+        @keyframes drift5 {
+            0% {
+                transform: translate(110vw, 80vh) rotate(0deg) scale(0.6);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-10vw, 20vh) rotate(-720deg) scale(1.4);
+                opacity: 0;
+            }
         }
 
         /* Improved Chat Input Focus Styling */
         #chat-input:focus {
             background-color: rgba(255, 255, 255, 0.08);
-            border-color: rgba(236, 72, 153, 0.4);
+            border-color: rgba(16, 185, 129, 0.4);
         }
 
         .ico {
             object-fit: cover;
-        }
-
-        .cursor-pointer {
-            cursor: pointer;
             width: 200px;
             height: 60px;
         }
@@ -352,15 +569,70 @@
     </style>
 </head>
 
-<body class="scrollable-content">
+<body class="bg-black text-white selection:bg-emerald-500/30">
+
+    <!-- Background Layers (Fixed to Viewport) -->
+    <div class="bg-grid"></div>
+    <div class="bg-leaf top-[-10%] left-[-10%]" style="animation-delay: 0s"></div>
+    <div class="bg-leaf bottom-[-10%] right-[-10%]" style="animation-delay: -5s; width: 600px; height: 600px;"></div>
+    <div class="bg-leaf top-[40%] left-[60%]"
+        style="animation-delay: -12s; width: 300px; height: 300px; background: radial-gradient(circle, rgba(74, 222, 128, 0.05) 0%, transparent 70%);">
+    </div>
+
+    <!-- Animated Leaves Scatter - High Density -->
+    <div class="leaf-particle leaf-anim-1 text-4xl" style="top: 10%; left: 0px; animation-delay: 0s;"></div>
+    <div class="leaf-particle leaf-anim-2 text-2xl" style="top: 40%; left: 100%; animation-delay: -5s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-3 text-3xl" style="top: 100%; left: 50%; animation-delay: -12s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-4 text-5xl" style="top: 30%; left: -10%; animation-delay: -3s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-5 text-xl" style="top: 80%; left: 110%; animation-delay: -8s;"><i
+            class="fas fa-leaf"></i></div>
+
+    <div class="leaf-particle leaf-anim-1 text-2xl" style="top: 50%; left: 20%; animation-delay: -15s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-2 text-6xl" style="top: -10%; left: 70%; animation-delay: -20s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-3 text-4xl" style="top: 60%; left: 40%; animation-delay: -25s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-4 text-3xl" style="bottom: -10%; left: 10%; animation-delay: -30s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-5 text-5xl" style="top: 20%; right: -10%; animation-delay: -35s;"><i
+            class="fas fa-leaf"></i></div>
+
+    <div class="leaf-particle leaf-anim-1 text-3xl" style="top: 45%; left: 15%; animation-delay: -2s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-2 text-xl" style="top: 15%; left: 85%; animation-delay: -7s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-3 text-5xl" style="top: 95%; left: 55%; animation-delay: -13s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-4 text-4xl" style="top: 35%; left: 5%; animation-delay: -19s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-5 text-2xl" style="top: 75%; left: 95%; animation-delay: -24s;"><i
+            class="fas fa-leaf"></i></div>
+
+    <div class="leaf-particle leaf-anim-1 text-5xl" style="top: 5%; left: 25%; animation-delay: -11s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-2 text-3xl" style="top: 55%; left: 75%; animation-delay: -16s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-3 text-xl" style="top: 85%; left: 35%; animation-delay: -21s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-4 text-6xl" style="top: 25%; left: 45%; animation-delay: -26s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-5 text-4xl" style="top: 65%; left: 65%; animation-delay: -31s;"><i
+            class="fas fa-leaf"></i></div>
 
     <!-- STEP 1: LANDING PAGE -->
     <section id="step-landing" class="min-h-screen flex flex-col fade-in">
+
         <!-- Top Navigation -->
         <nav
             class="fixed top-0 inset-x-0 z-[60] py-6 px-6 sm:px-12 flex justify-between items-center bg-black/40 backdrop-blur-xl border-b border-white/5">
-            <div class="cursor-pointer" onclick="window.scrollTo(0,0)">
-                <img class="ico" src="ico.png" alt="MiraMi Logo" class="w-10 h-10 object-contain">
+            <div class="flex items-center">
+                <div class="cursor-pointer" onclick="goHome()">
+                    <img class="ico" src="ico.png" alt="Leaf Cam Logo">
+                </div>
             </div>
 
             <div class="flex gap-4 sm:gap-8 text-[10px] sm:text-xs font-bold text-white/50 tracking-widest">
@@ -376,17 +648,20 @@
         <!-- Hero Section -->
         <div class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-24 pb-12">
             <div class="mb-8 p-5  rotate-3 shadow-2xl">
-                <img src="iconn.png" class="w-16 h-16 object-cover" alt="Icon">
+                <img src="iconn.png" class="w-32 h-32 object-cover scale-110" alt="Icon">
 
             </div>
-            <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-4 text-white">
-                <span class="mira-gradient-text italic">Free Random Video Chat</span><br/> with Real People
+            <h1 class="text-6xl md:text-9xl font-black tracking-tighter mb-8 flex flex-col" data-reveal>
+                <span class="leaf-gradient-text italic">Random</span>
+                <span class="text-white">Video Chat.</span>
             </h1>
 
-            <div class="text-lg md:text-xl font-semibold mb-8 text-white/70 max-w-3xl leading-relaxed mx-auto text-left sm:text-center mt-6">
-                <p class="mb-4">Start a live video chat instantly and connect with people from the United States, United Kingdom, Canada, and other Tier 1 countries. No registration. No waiting. Just real-time conversations.</p>
-                <p class="mb-6">This platform is built for speed, simplicity, and direct human interaction.</p>
-                <div class="flex flex-col sm:flex-row gap-6 sm:gap-12 justify-center text-left max-w-fit mx-auto mt-6 text-sm md:text-base text-white/80">
+            <div class="text-xl md:text-2xl font-medium mb-12 text-white/70 max-w-2xl leading-relaxed" data-reveal
+                style="animation-delay: 0.2s">
+                <p class="mb-4">Leaf Cam is the world's most premium way to connect. Meet amazing people from USA, UK,
+                    and Canada instantly.</p>
+                <div
+                    class="flex flex-col sm:flex-row gap-6 sm:gap-12 justify-center text-left max-w-fit mx-auto mt-6 text-sm md:text-base text-white/80">
                     <ul class="list-disc pl-6 space-y-2 sm:space-y-3">
                         <li>Instant one-on-one video chat</li>
                         <li>No signup or login required</li>
@@ -399,20 +674,21 @@
                 </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-5 mb-16">
-                <button onclick="goToStep('signup')"
-                    class="group bg-pink-600 text-white px-10 py-5 rounded-full font-black text-lg hover:bg-pink-500 hover:scale-105 transition-all shadow-2xl shadow-pink-600/20 active:scale-95">
-                    START CHATTING NOW — IT'S FREE
+            <div class="flex flex-col sm:flex-row gap-5 mb-16" data-reveal>
+                <button onclick="startSignupFlow()"
+                    class="group bg-emerald-600 text-white px-12 py-6 rounded-full font-black text-xl hover:bg-emerald-500 hover:scale-105 transition-all shadow-2xl shadow-emerald-600/20 active:scale-95 uppercase tracking-widest flex items-center justify-center gap-3 btn-shine">
+                    Start Free Chat
+                    <i class="fas fa-chevron-right text-sm group-hover:translate-x-1 transition-transform"></i>
                 </button>
                 <button onclick="enterAsGuest()"
-                    class="group bg-zinc-900 text-white border border-white/10 px-10 py-5 rounded-full font-bold text-lg hover:bg-zinc-800 transition-all active:scale-95">
+                    class="group bg-zinc-900 text-white border border-white/10 px-10 py-5 rounded-full font-bold text-lg hover:bg-zinc-800 transition-all active:scale-95 btn-shine">
                     TRY AS GUEST
                 </button>
             </div>
 
             <div class="flex items-center gap-6 text-white/30 text-xs font-bold uppercase tracking-[0.2em]">
                 <span>10K+ Active Users</span>
-                <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
                 <span>Real-Time Translation</span>
             </div>
 
@@ -423,17 +699,20 @@
         <!-- Details Section -->
         <div id="details" class="max-w-6xl mx-auto px-6 py-24 space-y-40">
             <!-- Exclusivity -->
-            <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div class="grid md:grid-cols-2 gap-20 items-center" data-reveal>
                 <div class="space-y-8">
                     <div
-                        class="inline-block bg-pink-500/10 text-pink-500 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">
+                        class="inline-block bg-emerald-500/10 text-emerald-500 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">
                         What Makes This Different</div>
-                    <h2 class="text-4xl md:text-5xl font-black mira-gradient-text uppercase leading-tight">Why This Random Video Chat Works Better</h2>
+                    <h2 class="text-4xl md:text-5xl font-black leaf-gradient-text uppercase leading-tight">Why This
+                        Random Video Chat Works Better</h2>
                     <p class="text-white/60 leading-relaxed text-lg">
-                        Most video chat platforms are slow, crowded, or require unnecessary steps. This platform removes friction and focuses on what matters: instant connection.
+                        Most video chat platforms are slow, crowded, or require unnecessary steps. This platform removes
+                        friction and focuses on what matters: instant connection.
                     </p>
                     <p class="text-white/60 leading-relaxed text-lg">
-                        You don’t need profiles, swipes, or long signups. Everything happens in real time. The system is optimized for:
+                        You don’t need profiles, swipes, or long signups. Everything happens in real time. The system is
+                        optimized for:
                     </p>
                     <ul class="list-disc pl-6 text-white/60 leading-relaxed text-lg space-y-2">
                         <li><b>Faster pairing speeds</b></li>
@@ -441,20 +720,23 @@
                         <li><b>Minimal loading delays</b></li>
                         <li><b>Continuous chat flow</b></li>
                     </ul>
-                    <p class="text-white/60 leading-relaxed text-lg italic border-l-2 border-pink-500/30 pl-6 mt-4">
-                        "This makes it suitable for users who want quick, uninterrupted conversations without the hassle."
+                    <p class="text-white/60 leading-relaxed text-lg italic border-l-2 border-emerald-500/30 pl-6 mt-4">
+                        "This makes it suitable for users who want quick, uninterrupted conversations without the
+                        hassle."
                     </p>
                 </div>
                 <div class="relative">
-                    <div class="absolute -inset-4 bg-pink-600/20 blur-3xl rounded-full"></div>
+                    <div class="absolute -inset-4 bg-emerald-600/20 blur-3xl rounded-full"></div>
                     <div
                         class="relative glass p-10 rounded-[4rem] text-center transform hover:rotate-0 transition-transform duration-500 rotate-3">
-                        <i class="fas fa-shield-heart text-7xl text-pink-500 mb-8 block"></i>
+                        <i class="fas fa-shield-heart text-7xl text-emerald-500 mb-8 block"></i>
                         <h3 class="text-2xl font-black mb-4 uppercase">Trust & Safety</h3>
-                        <p class="text-sm text-white/40 leading-relaxed">Your privacy is important when using random video chat platforms. No personal information or account is needed to start. You control when to connect or skip, and conversations are temporary.</p>
+                        <p class="text-sm text-white/40 leading-relaxed">Your privacy is important when using random
+                            video chat platforms. No personal information or account is needed to start. You control
+                            when to connect or skip, and conversations are temporary.</p>
                         <div class="mt-8 pt-8 border-t border-white/5 flex justify-around">
                             <div class="text-center">
-                                <div class="text-pink-500 font-black text-2xl uppercase">100%</div>
+                                <div class="text-emerald-500 font-black text-2xl uppercase">100%</div>
                                 <div class="text-[10px] text-white/30 uppercase font-bold">Anonymous</div>
                             </div>
                             <div class="text-center">
@@ -467,29 +749,37 @@
             </div>
 
             <!-- Global Reach -->
-            <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div class="grid md:grid-cols-2 gap-20 items-center" data-reveal>
                 <div class="relative md:order-1 order-2">
-                    <div class="absolute -inset-4 bg-indigo-600/20 blur-3xl rounded-full"></div>
+                    <div class="absolute -inset-4 bg-emerald-600/20 blur-3xl rounded-full"></div>
                     <div
                         class="relative glass p-10 rounded-[4rem] text-center transform hover:rotate-0 transition-transform duration-500 -rotate-3">
-                        <i class="fas fa-map-location-dot text-7xl text-indigo-500 mb-8 block"></i>
+                        <i class="fas fa-map-location-dot text-7xl text-emerald-500 mb-8 block"></i>
                         <h3 class="text-2xl font-black mb-4 uppercase">Tier 1 Connections</h3>
-                        <p class="text-sm text-white/40 leading-relaxed">This platform is optimized to connect you with high-quality users across top regions, providing better conversation quality and engagement.</p>
+                        <p class="text-sm text-white/40 leading-relaxed">This platform is optimized to connect you with
+                            high-quality users across top regions, providing better conversation quality and engagement.
+                        </p>
                         <div class="mt-8 flex flex-wrap justify-center gap-3">
-                            <span class="bg-white/5 px-3 py-1.5 rounded-full text-[10px] font-bold text-white/60">USA</span>
-                            <span class="bg-white/5 px-3 py-1.5 rounded-full text-[10px] font-bold text-white/60">UK</span>
-                            <span class="bg-white/5 px-3 py-1.5 rounded-full text-[10px] font-bold text-white/60">CANADA</span>
-                            <span class="bg-white/5 px-3 py-1.5 rounded-full text-[10px] font-bold text-white/60">AUSTRALIA</span>
+                            <span
+                                class="bg-white/5 px-3 py-1.5 rounded-full text-[10px] font-bold text-white/60">USA</span>
+                            <span
+                                class="bg-white/5 px-3 py-1.5 rounded-full text-[10px] font-bold text-white/60">UK</span>
+                            <span
+                                class="bg-white/5 px-3 py-1.5 rounded-full text-[10px] font-bold text-white/60">CANADA</span>
+                            <span
+                                class="bg-white/5 px-3 py-1.5 rounded-full text-[10px] font-bold text-white/60">AUSTRALIA</span>
                         </div>
                     </div>
                 </div>
                 <div class="space-y-8 md:order-2 order-1">
                     <div
-                        class="inline-block bg-indigo-500/10 text-indigo-400 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">
+                        class="inline-block bg-emerald-500/10 text-emerald-400 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">
                         Use Cases</div>
-                    <h2 class="text-4xl md:text-5xl font-black mira-gradient-text uppercase leading-tight">What You Can Do on This Platform</h2>
+                    <h2 class="text-4xl md:text-5xl font-black leaf-gradient-text uppercase leading-tight">What You Can
+                        Do on This Platform</h2>
                     <p class="text-white/60 leading-relaxed text-lg">
-                        People use random video chat for different reasons. Unlike traditional social apps, this focuses on live interaction instead of profiles.
+                        People use random video chat for different reasons. Unlike traditional social apps, this focuses
+                        on live interaction instead of profiles.
                     </p>
                     <ul class="list-disc pl-6 text-white/60 leading-relaxed text-lg space-y-2">
                         <li><b>Meet new people</b> from the USA, UK, and Canada</li>
@@ -507,25 +797,35 @@
                     <div
                         class="inline-block bg-emerald-500/10 text-emerald-400 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">
                         How It Works</div>
-                    <h2 class="text-4xl md:text-5xl font-black mira-gradient-text uppercase leading-tight">How to Start a Random Video Chat</h2>
+                    <h2 class="text-4xl md:text-5xl font-black leaf-gradient-text uppercase leading-tight">How to Start
+                        a Random Video Chat</h2>
                     <p class="text-white/60 leading-relaxed text-lg">
-                        Getting started takes only a few seconds. If the conversation doesn’t match your interest, you can skip and move to the next user instantly. No setup. No waiting queue. No complexity.
+                        Getting started takes only a few seconds. If the conversation doesn’t match your interest, you
+                        can skip and move to the next user instantly. No setup. No waiting queue. No complexity.
                     </p>
                     <div class="space-y-4 text-white/80 font-bold text-lg">
                         <div class="flex items-center gap-4">
-                            <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-400 shrink-0">1</div>
+                            <div
+                                class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-400 shrink-0">
+                                1</div>
                             Open the website
                         </div>
                         <div class="flex items-center gap-4">
-                            <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-400 shrink-0">2</div>
+                            <div
+                                class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-400 shrink-0">
+                                2</div>
                             Allow camera and microphone access
                         </div>
                         <div class="flex items-center gap-4">
-                            <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-400 shrink-0">3</div>
+                            <div
+                                class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-400 shrink-0">
+                                3</div>
                             Click the start button
                         </div>
                         <div class="flex items-center gap-4">
-                            <div class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-400 shrink-0">4</div>
+                            <div
+                                class="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-400 shrink-0">
+                                4</div>
                             Instantly connect with a random person
                         </div>
                     </div>
@@ -536,14 +836,16 @@
                         class="relative glass p-10 rounded-[4rem] text-center transform hover:rotate-0 transition-transform duration-500 rotate-1">
                         <i class="fas fa-video text-7xl text-emerald-500 mb-8 block"></i>
                         <h3 class="text-2xl font-black mb-4 uppercase">Best Omegle Alternative</h3>
-                        <p class="text-sm text-white/40 leading-relaxed mb-6">Many users search for alternatives to older platforms. This platform offers faster loading, a cleaner interface, and better mobile performance.</p>
+                        <p class="text-sm text-white/40 leading-relaxed mb-6">Many users search for alternatives to
+                            older platforms. This platform offers faster loading, a cleaner interface, and better mobile
+                            performance.</p>
                         <button onclick="goToStep('signup')"
                             class="mt-8 w-full bg-emerald-600 hover:bg-emerald-500 py-4 rounded-2xl font-black text-xs tracking-[0.2em] transition-all">START
                             CHATTING</button>
                     </div>
                 </div>
             </div>
-            
+
             <!-- SEO Content Section -->
             <div class="max-w-5xl mx-auto px-6 pb-24 space-y-16 text-white/70 text-lg leading-relaxed">
 
@@ -604,7 +906,8 @@
                     <h2 class="text-3xl font-black mb-6 text-white">Frequently Asked Questions</h2>
                     <div class="space-y-6">
                         <div class="bg-white/5 p-6 rounded-2xl">
-                            <h3 class="text-xl font-bold text-white mb-2">1. Is this random video chat completely free?</h3>
+                            <h3 class="text-xl font-bold text-white mb-2">1. Is this random video chat completely free?
+                            </h3>
                             <p>Yes, the platform is free to use with no required payment or subscription.</p>
                         </div>
                         <div class="bg-white/5 p-6 rounded-2xl">
@@ -613,7 +916,8 @@
                         </div>
                         <div class="bg-white/5 p-6 rounded-2xl">
                             <h3 class="text-xl font-bold text-white mb-2">3. Can I meet people from the USA or UK?</h3>
-                            <p>Yes, you may be matched with users from the United States, United Kingdom, Canada, and other countries.</p>
+                            <p>Yes, you may be matched with users from the United States, United Kingdom, Canada, and
+                                other countries.</p>
                         </div>
                         <div class="bg-white/5 p-6 rounded-2xl">
                             <h3 class="text-xl font-bold text-white mb-2">4. Is this a good Omegle alternative?</h3>
@@ -649,11 +953,21 @@
                 <div>
                     <h2 class="text-3xl font-black mb-4 text-white">Explore More</h2>
                     <div class="flex flex-col sm:flex-row flex-wrap gap-4">
-                        <a href="omegle-alternative.html" class="bg-white/5 hover:bg-white/10 px-5 py-3 rounded-full text-pink-400 hover:text-pink-300 transition-colors border border-white/10 text-sm font-bold">Best Omegle Alternative</a>
-                        <a href="random-video-chat.html" class="bg-white/5 hover:bg-white/10 px-5 py-3 rounded-full text-pink-400 hover:text-pink-300 transition-colors border border-white/10 text-sm font-bold">Random Video Chat</a>
-                        <a href="video-chat-alternative.html" class="bg-white/5 hover:bg-white/10 px-5 py-3 rounded-full text-pink-400 hover:text-pink-300 transition-colors border border-white/10 text-sm font-bold">Video Chat Alternative</a>
-                        <a href="free-webcam-chat.html" class="bg-white/5 hover:bg-white/10 px-5 py-3 rounded-full text-pink-400 hover:text-pink-300 transition-colors border border-white/10 text-sm font-bold">Free Cam Chat</a>
-                        <a href="mirami-alternatives.html" class="bg-white/5 hover:bg-white/10 px-5 py-3 rounded-full text-pink-400 hover:text-pink-300 transition-colors border border-white/10 text-sm font-bold">Best Random Chat Sites</a>
+                        <a href="omegle-alternative.html"
+                            class="bg-white/5 hover:bg-white/10 px-5 py-3 rounded-full text-emerald-400 hover:text-emerald-300 transition-colors border border-white/10 text-sm font-bold">Best
+                            Omegle Alternative</a>
+                        <a href="random-video-chat.html"
+                            class="bg-white/5 hover:bg-white/10 px-5 py-3 rounded-full text-emerald-400 hover:text-emerald-300 transition-colors border border-white/10 text-sm font-bold">Random
+                            Video Chat</a>
+                        <a href="video-chat-alternative.html"
+                            class="bg-white/5 hover:bg-white/10 px-5 py-3 rounded-full text-emerald-400 hover:text-emerald-300 transition-colors border border-white/10 text-sm font-bold">Video
+                            Chat Alternative</a>
+                        <a href="free-webcam-chat.html"
+                            class="bg-white/5 hover:bg-white/10 px-5 py-3 rounded-full text-emerald-400 hover:text-emerald-300 transition-colors border border-white/10 text-sm font-bold">Free
+                            Cam Chat</a>
+                        <a href="mirami-alternatives.html"
+                            class="bg-white/5 hover:bg-white/10 px-5 py-3 rounded-full text-emerald-400 hover:text-emerald-300 transition-colors border border-white/10 text-sm font-bold">Best
+                            Random Chat Sites</a>
                     </div>
                 </div>
 
@@ -667,12 +981,16 @@
                     </ul>
                 </div>
 
-                <div class="bg-pink-600/10 border border-pink-500/20 rounded-[3rem] p-10 text-center mt-12 relative overflow-hidden">
+                <div
+                    class="bg-pink-600/10 border border-pink-500/20 rounded-[3rem] p-10 text-center mt-12 relative overflow-hidden">
                     <div class="absolute -inset-4 bg-pink-600/20 blur-3xl rounded-full pointer-events-none"></div>
                     <div class="relative z-10 mx-auto">
-                        <h2 class="text-4xl font-black mb-4 text-white uppercase tracking-wider mira-gradient-text">Start Chatting Now</h2>
-                        <p class="mb-8 text-xl max-w-2xl mx-auto text-white">Begin your first video chat instantly. No signup. No delay. Click the button and connect with someone new right now.</p>
-                        <button onclick="goToStep('signup')" class="group bg-pink-600 text-white px-12 py-6 rounded-full font-black text-xl hover:bg-pink-500 hover:scale-105 transition-all shadow-2xl shadow-pink-600/20 active:scale-95 uppercase tracking-widest inline-block">
+                        <h2 class="text-4xl font-black mb-4 text-white uppercase tracking-wider mira-gradient-text">
+                            Start Chatting Now</h2>
+                        <p class="mb-8 text-xl max-w-2xl mx-auto text-white">Begin your first video chat instantly. No
+                            signup. No delay. Click the button and connect with someone new right now.</p>
+                        <button onclick="goToStep('signup')"
+                            class="group bg-pink-600 text-white px-12 py-6 rounded-full font-black text-xl hover:bg-pink-500 hover:scale-105 transition-all shadow-2xl shadow-pink-600/20 active:scale-95 uppercase tracking-widest inline-block">
                             Connect Instantly
                         </button>
                     </div>
@@ -686,14 +1004,7 @@
         <footer class="border-t border-white/5 py-16 px-6 text-center">
             <p class="text-white/20 text-[10px] uppercase tracking-widest mb-4">&copy; 2026 MiraMi Live Video Discovery.
                 All Rights Reserved.</p>
-            <div class="ant">
 
-                <span class="text-red-800 text-[10px] uppercase tracking-widest mb-4">
-                    <p>Built BY <span class="an">Antriksh</span> </p>
-                </span>
-                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGp5bHI2d29sb2N4b3EyYW1jeW0yenZ3MWwxMWoxN3gwbHBqbnJ5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r88w2d7tHqazFwNEGN/giphy.gif"
-                    alt="">
-            </div>
 
             <div class="flex justify-center gap-10 text-[10px] font-black text-white/10 uppercase tracking-[0.3em]">
                 <span>No Credit Card Required</span>
@@ -967,10 +1278,12 @@
     </div>
 
     <div id="ageGateModal" class="fixed inset-0 z-[200] flex items-center justify-center bg-black/98 p-6">
-        <div class="bg-zinc-900 w-full max-w-md border border-white/10 rounded-[3rem] p-10 text-center shadow-2xl relative overflow-hidden">
+        <div
+            class="bg-zinc-900 w-full max-w-md border border-white/10 rounded-[3rem] p-10 text-center shadow-2xl relative overflow-hidden">
             <div class="absolute -top-24 -left-24 w-48 h-48 bg-pink-600/20 blur-3xl rounded-full"></div>
             <div class="relative z-10">
-                <div class="w-24 h-24 bg-pink-600/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-pink-500/20">
+                <div
+                    class="w-24 h-24 bg-pink-600/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-pink-500/20">
                     <span class="text-4xl font-black text-pink-500">18+</span>
                 </div>
                 <h3 class="text-3xl font-black mb-4 text-white uppercase tracking-tighter">Age Verification</h3>
@@ -988,7 +1301,8 @@
                     </button>
                 </div>
                 <p class="mt-8 text-[10px] text-white/20 leading-tight">
-                    By entering, you agree to our Terms of Service and Privacy Policy. We use cookies to ensure you have the best experience.
+                    By entering, you agree to our Terms of Service and Privacy Policy. We use cookies to ensure you have
+                    the best experience.
                 </p>
             </div>
         </div>
@@ -1059,19 +1373,31 @@
         let videoProgress = {}; // Track video playhead positions
 
         window.onload = () => {
-            const ageVerified = localStorage.getItem('mirami_age_verified');
+            // Age gate no longer appears on load
             const ageGate = getEl('ageGateModal');
-            if (ageVerified) {
-                if (ageGate) ageGate.style.display = 'none';
-            } else {
-                if (ageGate) ageGate.style.display = 'flex';
-            }
+            if (ageGate) ageGate.style.display = 'none';
+
+            // Init intersection observer for scroll reveals
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
         };
 
         function verifyAge() {
             localStorage.setItem('mirami_age_verified', 'true');
             const ageGate = getEl('ageGateModal');
             if (ageGate) ageGate.style.display = 'none';
+            
+            // Resume to chat since verification was triggered after auth
+            goToStep('chat');
+            initPermissions();
         }
 
         function goHome() {
@@ -1183,8 +1509,16 @@
             localStorage.setItem('streamhop_user', JSON.stringify(userData));
             if (getEl('display-name')) getEl('display-name').innerText = `${userData.name}, ${userData.age}`;
             if (getEl('local-user-tag')) getEl('local-user-tag').innerText = userData.name;
-            goToStep('chat');
-            initPermissions();
+            
+            // Age verification check deferred to here
+            const ageVerified = localStorage.getItem('mirami_age_verified');
+            if (ageVerified) {
+                goToStep('chat');
+                initPermissions();
+            } else {
+                const ageGate = getEl('ageGateModal');
+                if (ageGate) ageGate.style.display = 'flex';
+            }
         }
 
         async function initPermissions() {
@@ -1482,7 +1816,17 @@
                 camBtn.innerHTML = isCamOff ? '<i class="fas fa-video-slash text-xl text-white"></i>' : '<i class="fas fa-video text-xl text-white"></i>';
             }
             if (camOffOverlay) camOffOverlay.classList.toggle('hidden', !isCamOff);
-        }
+        // Mouse parallax for leaves
+        document.addEventListener('mousemove', (e) => {
+            const leaves = document.querySelectorAll('.bg-leaf');
+            const x = (window.innerWidth / 2 - e.pageX) / 40;
+            const y = (window.innerHeight / 2 - e.pageY) / 40;
+            
+            leaves.forEach((leaf, index) => {
+                const depth = (index + 1) * 0.5;
+                leaf.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
+            });
+        });
     </script>
 </body>
 

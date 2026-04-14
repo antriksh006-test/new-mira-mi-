@@ -5,17 +5,18 @@
     <script src="https://quge5.com/88/tag.min.js" data-zone="207920" async data-cfasync="false"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Webcam Chat – Real People, High Definition, 100% Free</title>
+    <title>Leaf Cam – Free Webcam Chat | Real People, HD Video</title>
     <meta name="description"
-        content="Join the world's most premium free webcam chat. Connect with strangers instantly in HD quality. No credit card, no signup, no hassle. Fast global matching.">
+        content="Join Leaf Cam, the world's most premium free webcam chat. Connect with strangers instantly in HD quality. No credit card, no signup, no hassle. Fast global matching.">
     <meta name="keywords"
-        content="free webcam chat, cam chat, live video chat, chat with strangers, random cam matching, free video calls, anonymous webcam chat">
-    
+        content="leaf cam, free webcam chat, cam chat, live video chat, chat with strangers, random cam matching, free video calls, anonymous webcam chat">
+    <link rel="canonical" href="https://mirami.chat/free-webcam-chat.html" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    <link rel="shortcut icon" href="icons/favicon.ico">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="application/ld+json">
     {
@@ -24,7 +25,7 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Is webcam chat on MiraMi completely free?",
+          "name": "Is webcam chat on Leaf Cam completely free?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes, our webcam chat service is 100% free with no hidden charges or subscriptions."
@@ -35,7 +36,7 @@
           "name": "Does the webcam chat work on mobile?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, MiraMi is fully optimized for mobile browsers, allowing you to chat on the go."
+            "text": "Yes, Leaf Cam is fully optimized for mobile browsers, allowing you to chat on the go."
           }
         }
       ]
@@ -43,7 +44,7 @@
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    
+
     <style>
         body {
             background-color: #000;
@@ -53,10 +54,215 @@
             scroll-behavior: smooth;
         }
 
-        .mira-gradient-text {
-            background: linear-gradient(to right, #ec4899, #8b5cf6);
+        .leaf-gradient-text {
+            background: linear-gradient(to right, #4ade80, #10b981);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* Lively Background Elements */
+        .bg-leaf {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            pointer-events: none;
+            animation: float 25s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(100px, 50px) scale(1.1);
+            }
+
+            100% {
+                transform: translate(-50px, 150px) scale(0.9);
+            }
+        }
+
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -2;
+            pointer-events: none;
+            animation: gridMove 40s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 50px 50px;
+            }
+        }
+
+        .leaf-particle {
+            position: fixed;
+            color: rgba(16, 185, 129, 0.18);
+            pointer-events: none;
+            z-index: -1;
+            filter: blur(1.5px);
+            transition: color 0.3s;
+        }
+
+        .dot-particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: rgba(16, 185, 129, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            animation: drift-dot 15s linear infinite;
+        }
+
+        .leaf-anim-1 {
+            animation: drift1 25s linear infinite;
+        }
+
+        .leaf-anim-2 {
+            animation: drift2 35s linear infinite;
+        }
+
+        .leaf-anim-3 {
+            animation: drift3 30s linear infinite;
+        }
+
+        .leaf-anim-4 {
+            animation: drift4 40s linear infinite;
+        }
+
+        .leaf-anim-5 {
+            animation: drift5 45s linear infinite;
+        }
+
+        @keyframes drift1 {
+            0% {
+                transform: translate(-10vw, -10vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(110vw, 110vh) rotate(360deg) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes drift2 {
+            0% {
+                transform: translate(110vw, -10vh) rotate(0deg) scale(1.2);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-10vw, 110vh) rotate(-360deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes drift3 {
+            0% {
+                transform: translate(50vw, 110vh) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(60vw, -10vh) rotate(720deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        @keyframes drift4 {
+            0% {
+                transform: translate(-10vw, 50vh) rotate(0deg) scale(1);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(110vw, 40vh) rotate(180deg) scale(0.7);
+                opacity: 0;
+            }
+        }
+
+        @keyframes drift5 {
+            0% {
+                transform: translate(110vw, 80vh) rotate(0deg) scale(0.6);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-10vw, 20vh) rotate(-720deg) scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        @keyframes drift-dot {
+            0% {
+                transform: translateY(110vh) translateX(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) translateX(100px);
+                opacity: 0;
+            }
         }
 
         .glass {
@@ -70,12 +276,23 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .ico { object-fit: cover; width: 200px; height: 60px; }
-        
+        .ico {
+            object-fit: cover;
+            width: 200px;
+            height: 60px;
+        }
+
         .ant {
             position: relative;
             justify-content: center;
@@ -83,46 +300,94 @@
             display: flex;
             gap: 20px;
         }
+
         .ant p {
             font-weight: 900;
             color: #8b5cf6;
             text-shadow: 0 0 9px rgb(13, 21, 255);
             animation: blink 2s infinite;
         }
+
         @keyframes blink {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 
 <body class="bg-black text-white">
 
+    <!-- Animated Background -->
+    <div class="bg-grid"></div>
+    <div class="bg-leaf top-[-10%] left-[-10%]" style="animation-delay: 0s"></div>
+    <div class="bg-leaf bottom-[-10%] right-[-10%]" style="animation-delay: -5s; width: 600px; height: 600px;"></div>
+
+    <!-- Animated Particles - High Density -->
+    <div class="leaf-particle leaf-anim-1 text-4xl" style="top: 10%; left: 0px; animation-delay: 0s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-2 text-2xl" style="top: 40%; left: 100%; animation-delay: -5s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-3 text-3xl" style="top: 100%; left: 50%; animation-delay: -12s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-4 text-5xl" style="top: 30%; left: -10%; animation-delay: -3s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-5 text-xl" style="top: 80%; left: 110%; animation-delay: -8s;"><i
+            class="fas fa-leaf"></i></div>
+
+    <div class="leaf-particle leaf-anim-1 text-2xl" style="top: 50%; left: 20%; animation-delay: -15s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-2 text-6xl" style="top: -10%; left: 70%; animation-delay: -20s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-3 text-4xl" style="top: 60%; left: 40%; animation-delay: -25s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-4 text-3xl" style="bottom: -10%; left: 10%; animation-delay: -30s;"><i
+            class="fas fa-leaf"></i></div>
+    <div class="leaf-particle leaf-anim-5 text-5xl" style="top: 20%; right: -10%; animation-delay: -35s;"><i
+            class="fas fa-leaf"></i></div>
+
+    <div class="dot-particle" style="left: 20%; animation-delay: -2s;"></div>
+    <div class="dot-particle" style="left: 50%; animation-delay: -7s;"></div>
+    <div class="dot-particle" style="left: 80%; animation-delay: -12s;"></div>
+
     <!-- Navigation -->
-    <nav class="fixed top-0 inset-x-0 z-[60] py-6 px-6 sm:px-12 flex justify-between items-center bg-black/40 backdrop-blur-xl border-b border-white/5">
+    <nav
+        class="fixed top-0 inset-x-0 z-[60] py-6 px-6 sm:px-12 flex justify-between items-center bg-black/40 backdrop-blur-xl border-b border-white/5">
         <a href="index.html" class="cursor-pointer">
-            <img class="ico" src="ico.png" alt="MiraMi Logo">
+            <img class="ico" src="ico.png" alt="Leaf Cam Logo">
         </a>
         <div class="flex gap-4 sm:gap-8 text-[10px] sm:text-xs font-bold text-white/50 tracking-widest">
             <a href="index.html" class="hover:text-white transition-colors uppercase">Home</a>
             <a href="free-webcam-chat.html" class="text-white transition-colors uppercase">Webcam Chat</a>
-            <a href="index.html" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full transition-colors uppercase">Join Now</a>
+            <a href="index.html"
+                class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-full transition-colors uppercase">Join
+                Now</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-32 pb-20">
-        <div class="mb-12 p-1 bg-gradient-to-tr from-pink-500 to-violet-500 rounded-3xl rotate-3 shadow-2xl">
-            <img src="iconn.png" class="w-16 h-16 rounded-2xl object-cover" alt="MiraMi Icon">
+    <section
+        class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-32 pb-20 relative overflow-hidden">
+        <div class="mb-12 p-1 bg-gradient-to-tr from-emerald-500 to-green-500 rounded-3xl rotate-3 shadow-2xl">
+            <img src="iconn.png" class="w-32 h-32 rounded-2xl object-cover scale-110" alt="Leaf Cam Icon">
         </div>
         <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-8 fade-in">
-            Experience <span class="mira-gradient-text italic">Free Webcam Chat</span><br/> in High Definition
+            Experience <span class="leaf-gradient-text italic">Free Webcam Chat</span><br /> in High Definition
         </h1>
-        <p class="text-lg md:text-xl font-medium mb-12 text-white/70 max-w-3xl leading-relaxed mx-auto fade-in" style="animation-delay: 0.2s">
-            Connect face-to-face with the world. MiraMi provides the most stable and high-quality free webcam chat platform, designed for meaningful interactions and fun moments.
+        <p class="text-lg md:text-xl font-medium mb-12 text-white/70 max-w-3xl leading-relaxed mx-auto fade-in"
+            style="animation-delay: 0.2s">
+            Connect face-to-face with the world. Leaf Cam provides the most stable and high-quality free webcam chat
+            platform, designed for meaningful interactions and fun moments.
         </p>
         <div class="flex flex-col sm:flex-row gap-5 mb-16 fade-in" style="animation-delay: 0.4s">
-            <a href="index.html" class="group bg-pink-600 text-white px-12 py-6 rounded-full font-black text-xl hover:bg-pink-500 hover:scale-105 transition-all shadow-2xl shadow-pink-600/20 active:scale-95 uppercase tracking-widest">
+            <a href="index.html"
+                class="group bg-emerald-600 text-white px-12 py-6 rounded-full font-black text-xl hover:bg-emerald-500 hover:scale-105 transition-all shadow-2xl shadow-emerald-600/20 active:scale-95 uppercase tracking-widest">
                 Get Started Free
             </a>
         </div>
@@ -130,36 +395,44 @@
 
     <!-- SEO Content Section -->
     <div class="max-w-6xl mx-auto px-6 py-24 space-y-40">
-        
+
         <!-- Quality -->
         <div class="grid md:grid-cols-2 gap-20 items-center">
             <div class="space-y-8 md:order-2 order-1">
-                <div class="inline-block bg-pink-500/10 text-pink-500 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">Premium Quality</div>
-                <h2 class="text-4xl md:text-5xl font-black mira-gradient-text uppercase leading-tight">Crystal Clear Conversations</h2>
+                <div
+                    class="inline-block bg-emerald-500/10 text-emerald-500 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">
+                    Premium Quality</div>
+                <h2 class="text-4xl md:text-5xl font-black leaf-gradient-text uppercase leading-tight">Crystal Clear
+                    Conversations</h2>
                 <p class="text-white/60 leading-relaxed text-lg">
-                    Why settle for blurry video? MiraMi uses advanced WebRTC technology to deliver high-definition video chat that works flawlessly even on mobile devices.
+                    Why settle for blurry video? Leaf Cam uses advanced WebRTC technology to deliver high-definition
+                    video chat that works flawlessly even on mobile devices.
                 </p>
                 <div class="space-y-4">
                     <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 bg-pink-600/20 rounded-xl flex items-center justify-center text-pink-500">
-                             <i class="fas fa-expand"></i>
+                        <div
+                            class="w-10 h-10 bg-emerald-600/20 rounded-xl flex items-center justify-center text-emerald-500">
+                            <i class="fas fa-expand"></i>
                         </div>
                         <span class="font-bold">Full-Screen HD Support</span>
                     </div>
                     <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 bg-pink-600/20 rounded-xl flex items-center justify-center text-pink-500">
-                             <i class="fas fa-gauge-high"></i>
+                        <div
+                            class="w-10 h-10 bg-emerald-600/20 rounded-xl flex items-center justify-center text-emerald-500">
+                            <i class="fas fa-gauge-high"></i>
                         </div>
                         <span class="font-bold">Low Latency matching</span>
                     </div>
                 </div>
             </div>
             <div class="relative md:order-1 order-2">
-                <div class="absolute -inset-4 bg-violet-600/20 blur-3xl rounded-full"></div>
-                <div class="relative glass p-10 rounded-[4rem] text-center transform hover:rotate-0 transition-transform duration-500 -rotate-3">
-                    <i class="fas fa-camera-retro text-7xl text-pink-500 mb-8 block"></i>
+                <div class="absolute -inset-4 bg-emerald-600/20 blur-3xl rounded-full"></div>
+                <div
+                    class="relative glass p-10 rounded-[4rem] text-center transform hover:rotate-0 transition-transform duration-500 -rotate-3">
+                    <i class="fas fa-camera-retro text-7xl text-emerald-500 mb-8 block"></i>
                     <h3 class="text-2xl font-black mb-4 uppercase">100% Free</h3>
-                    <p class="text-sm text-white/40 leading-relaxed mb-6">No credit cards, no subscriptions, no tokens. Our webcam chat is funded by non-intrusive ads so it stays free for everyone.</p>
+                    <p class="text-sm text-white/40 leading-relaxed mb-6">No credit cards, no subscriptions, no tokens.
+                        Our webcam chat is funded by non-intrusive ads so it stays free for everyone.</p>
                 </div>
             </div>
         </div>
@@ -187,12 +460,17 @@
         </div>
 
         <!-- CTA -->
-        <div class="bg-violet-600/10 border border-violet-500/20 rounded-[3rem] p-16 text-center relative overflow-hidden">
-            <div class="absolute -inset-4 bg-violet-600/20 blur-3xl rounded-full pointer-events-none"></div>
+        <div
+            class="bg-emerald-600/10 border border-emerald-500/20 rounded-[3rem] p-16 text-center relative overflow-hidden">
+            <div class="absolute -inset-4 bg-emerald-600/20 blur-3xl rounded-full pointer-events-none"></div>
             <div class="relative z-10">
-                <h2 class="text-5xl font-black mb-6 text-white uppercase italic tracking-wider">Join the Live Community</h2>
-                <p class="mb-12 text-xl max-w-2xl mx-auto text-white/70 font-medium">Don't miss out on the fun. Every click is a new possibility. Meet, chat, and make memories.</p>
-                <a href="index.html" class="inline-block bg-pink-600 text-white px-16 py-8 rounded-full font-black text-2xl hover:bg-pink-500 hover:scale-105 transition-all shadow-2xl active:scale-95 uppercase tracking-[0.2em]">Enter Webcam Chat</a>
+                <h2 class="text-5xl font-black mb-6 text-white uppercase italic tracking-wider">Join the Live Community
+                </h2>
+                <p class="mb-12 text-xl max-w-2xl mx-auto text-white/70 font-medium">Don't miss out on the fun. Every
+                    click is a new possibility. Meet, chat, and make memories.</p>
+                <a href="index.html"
+                    class="inline-block bg-emerald-600 text-white px-16 py-8 rounded-full font-black text-2xl hover:bg-emerald-500 hover:scale-105 transition-all shadow-2xl active:scale-95 uppercase tracking-[0.2em]">Enter
+                    Webcam Chat</a>
             </div>
         </div>
 
@@ -201,13 +479,12 @@
     <!-- Footer -->
     <footer class="border-t border-white/5 py-20 px-6 text-center">
         <div class="mb-12">
-            <img class="ico mx-auto opacity-50 grayscale hover:grayscale-0 transition-all cursor-pointer" src="ico.png" alt="MiraMi Footer Logo">
+            <img class="ico mx-auto opacity-50 grayscale hover:grayscale-0 transition-all cursor-pointer" src="ico.png"
+                alt="Leaf Cam Footer Logo" onclick="window.scrollTo(0,0)">
         </div>
-        <div class="ant mb-12">
-            <p>BUILT BY <span class="text-white">ANTRIKSH</span></p>
-            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGp5bHI2d29sb2N4b3EyYW1jeW0yenZ3MWwxMWoxN3gwbHBqbnJ5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r88w2d7tHqazFwNEGN/giphy.gif" class="w-12 h-12 rounded-full" alt="Dev Anim">
-        </div>
-        <div class="flex flex-wrap justify-center gap-x-12 gap-y-6 text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
+
+        <div
+            class="flex flex-wrap justify-center gap-x-12 gap-y-6 text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
             <a href="index.html" class="hover:text-white transition-colors">Home</a>
             <a href="omegle-alternative.html" class="hover:text-white transition-colors">Omegle Alt</a>
             <a href="free-webcam-chat.html" class="hover:text-white transition-colors">Free Cam Chat</a>
@@ -215,7 +492,8 @@
             <a href="mirami-alternatives.html" class="hover:text-white transition-colors">Alternatives</a>
             <a href="video-chat-alternative.html" class="hover:text-white transition-colors">Video Alt</a>
         </div>
-        <p class="mt-16 text-white/10 text-[10px] uppercase font-black tracking-widest">&copy; 2026 MIRAMI LIVE. ALL RIGHTS RESERVED.</p>
+        <p class="mt-16 text-white/10 text-[10px] uppercase font-black tracking-widest">&copy; 2026 LEAF CAM LIVE. ALL
+            RIGHTS RESERVED.</p>
     </footer>
 
 </body>
